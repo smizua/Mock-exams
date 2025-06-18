@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.task-03 {
+    display: flex;
+}
+
+@mixin arrow($color, $direction, $size) {
+    width: $size;
+    height: 0;
+    border-bottom: $size solid $color;
+    border-left: calc($size / 2) solid transparent;
+    border-right: calc($size / 2) solid transparent;
+
+    @if $direction == bottom {
+        transform: rotate(180deg);
+        }
+        @else if $direction == right {
+            transform: rotate(90deg);
+        }
+        @else if $direction == left {
+            transform: rotate(270deg);
+        }
+}
+
+.arrow-test {
+    &-blue {
+        @include arrow(blue, top, 20px)
+    }
+    &-red {
+        @include arrow(red, right, 25px)
+    }
+    &-green {
+        @include arrow(green, bottom, 60px)
+    }
+    &-yellow {
+        @include arrow(yellow, left, 100px)
+    }
+}
+

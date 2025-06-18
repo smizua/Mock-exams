@@ -1,0 +1,74 @@
+@use "sass:map";
+
+$colors: (
+    red: rgb(255, 51, 0),
+    blue: rgb(0, 238, 255),
+    gold: gold,
+    green: rgb(0, 128, 0)
+);
+
+
+$columns: 10;
+$column-base-width: 100% / $columns;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+[class*="col-"] {
+  min-height: 1px;
+  width: $column-base-width;
+  padding: 12px;
+}
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: $column-base-width * $i;
+  }
+}
+
+@media (max-width: 550px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+.red {
+    background-color: map.get($colors, red);
+}
+
+.light-red {
+    background-color: lighten(map.get($colors, red), 30%);
+}
+
+.blue {
+    background-color: map.get($colors, blue);
+    height: 400px;
+}
+
+.yellow {
+    background-color: map.get($colors, gold);
+    height: 80px;
+}
+
+.green {
+    background-color: green;
+}
+
+.dark-green {
+    background-color: darken(map.get($colors, green), 20%);
+}

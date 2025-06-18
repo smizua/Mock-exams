@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+[class*=col-] {
+  min-height: 1px;
+  width: 10%;
+  padding: 12px;
+}
+
+.col-1 {
+  width: 10%;
+}
+
+.col-2 {
+  width: 20%;
+}
+
+.col-3 {
+  width: 30%;
+}
+
+.col-4 {
+  width: 40%;
+}
+
+.col-5 {
+  width: 50%;
+}
+
+.col-6 {
+  width: 60%;
+}
+
+.col-7 {
+  width: 70%;
+}
+
+.col-8 {
+  width: 80%;
+}
+
+.col-9 {
+  width: 90%;
+}
+
+.col-10 {
+  width: 100%;
+}
+
+@media (max-width: 550px) {
+  [class*=col-] {
+    width: 100%;
+  }
+}
+.red {
+  background-color: rgb(255, 51, 0);
+}
+
+.light-red {
+  background-color: #ffad99;
+}
+
+.blue {
+  background-color: rgb(0, 238, 255);
+  height: 400px;
+}
+
+.yellow {
+  background-color: gold;
+  height: 80px;
+}
+
+.green {
+  background-color: green;
+}
+
+.dark-green {
+  background-color: #001a00;
+}/*# sourceMappingURL=style.css.map */
